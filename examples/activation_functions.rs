@@ -13,7 +13,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Sigmoid
     let sigmoid = sigmoid(&input)?;
     println!("Sigmoid: {:?}", sigmoid.to_vec1::<f32>()?);
-
+  
     // Tanh
     let tanh = input.tanh()?;
     println!("Tanh: {:?}", tanh.to_vec1::<f32>()?);

@@ -28,7 +28,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let model = SimpleNet::new(var_builder)?;
 
-    let input = Tensor::new(&[[1f32, 2., 3.], [4., 5., 6.]], &device)?;
+    let input = Tensor::new(
+        &[
+            [1f32, 2., 3.],
+            [4., 5., 6.]
+        ],
+        &device
+    )?;
 
     let output = model.forward(&input)?;
 
